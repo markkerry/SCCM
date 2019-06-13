@@ -1,0 +1,24 @@
+# Hardware Manufacturers
+SELECT * FROM Win32_ComputerSystem WHERE Manufacturer LIKE "Hewlett-Packard"
+SELECT * FROM Win32_ComputerSystem WHERE Manufacturer LIKE "Dell Inc."
+SELECT * FROM Win32_ComputerSystem WHERE Manufacturer LIKE "LENOVO"
+SELECT * FROM Win32_ComputerSystem WHERE Manufacturer LIKE "Microsoft Corporation"
+SELECT * FROM Win32_ComputerSystem WHERE Manufacturer LIKE "TOSHIBA"
+
+# Hardware Models
+SELECT * FROM Win32_ComputerSystem WHERE Model LIKE "%Z440%"
+SELECT * FROM Win32_ComputerSystem WHERE Model LIKE "Optiplex 7460 AIO"
+SELECT * FROM Win32_ComputerSystem WHERE Model LIKE "Latitude 7390"
+SELECT * FROM Win32_ComputerSystem WHERE Model LIKE "Surface Pro"
+
+# Hardware versions (Lenovo)
+SELECT * FROM Win32_ComputerSystemProduct WHERE Version LIKE "%T480s%"
+
+# Computer name example
+SELECT * FROM Win32_ComputerSystem WHERE Name LIKE "%PC%"
+
+# User collection based on AD group
+select SMS_R_USER.ResourceID,SMS_R_USER.ResourceType,SMS_R_USER.Name,SMS_R_USER.UniqueUserName,SMS_R_USER.WindowsNTDomain from SMS_R_User where SMS_R_User.SecurityGroupName = "DOMAIN\\GROUP"
+
+# Device collection based on AD group
+select SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client from SMS_R_System where SMS_R_System.SecurityGroupName = "DOMAIN\\GROUP"
