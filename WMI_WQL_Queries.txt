@@ -7,8 +7,10 @@ SELECT * FROM Win32_ComputerSystem WHERE Manufacturer LIKE "TOSHIBA"
 
 # Hardware Models
 SELECT * FROM Win32_ComputerSystem WHERE Model LIKE "%Z440%"
+SELECT * FROM Win32_ComputerSystem WHERE Model LIKE "Optiplex 5060"
 SELECT * FROM Win32_ComputerSystem WHERE Model LIKE "Optiplex 7460 AIO"
 SELECT * FROM Win32_ComputerSystem WHERE Model LIKE "Latitude 7390"
+SELECT * FROM Win32_ComputerSystem WHERE Model LIKE "Precision Tower 3430"
 SELECT * FROM Win32_ComputerSystem WHERE Model LIKE "Surface Pro"
 
 # Hardware versions (Lenovo)
