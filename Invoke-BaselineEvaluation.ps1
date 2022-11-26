@@ -1,0 +1,1 @@
+Get-WmiObject -Namespace root\ccm\dcm -Class SMS_DesiredConfiguration | ForEach-Object {([wmiclass]"root\ccm\dcm:SMS_DesiredConfiguration").TriggerEvaluation($_.Name, $_.Version)}
